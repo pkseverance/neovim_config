@@ -1,6 +1,6 @@
 # neovim_config
 
-## Prerequisite
+## Prerequisites
 
 - A terminal that supports truecolor (I use [Alacritty](https://alacritty.org/))
 - Configure your terminal to use a patched font from [nerdfonts](https://www.nerdfonts.com/font-downloads)
