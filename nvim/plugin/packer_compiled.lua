@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/patriciaseverance/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/Users/patriciaseverance/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/Users/patriciaseverance/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
