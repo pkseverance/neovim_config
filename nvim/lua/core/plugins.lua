@@ -16,10 +16,40 @@ return require('packer').startup(function(use)
   use ({ 'rose-pine/neovim', as = 'rose-pine' })
   use {'nvim-tree/nvim-tree.lua'}
   use {'nvim-tree/nvim-web-devicons'}
-  use {'akinsho/bufferline.nvim', tag = '*', requires = 'nvim-tree/nvim-web-devicons'}
-  use {'nvim-treesitter/nvim-treesitter'}
-  use {'nvim-telescope/telescope.nvim', tag = '*', requires = {{'nvim-lua/plenary.nvim'}}}
   use {'lewis6991/gitsigns.nvim'}
+  use {'folke/neoconf.nvim'}
+  use {'alexghergh/nvim-tmux-navigation'}
+
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
+    end,
+  }
+
+  use {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.x',
+    requires = {{'nvim-lua/plenary.nvim'}}
+  }
+
+  use {
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig',
+  }
+
+  use {
+    'hrsh7th/nvim-cmp',
+    requires = {
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-path',
+    'L3MON4D3/LuaSnip',
+    'saadparwaiz1/cmp_luasnip',
+    }
+  }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
