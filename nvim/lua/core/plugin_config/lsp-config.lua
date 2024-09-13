@@ -11,7 +11,7 @@ require('mason-lspconfig').setup_handlers {
       return
     end
     if (server_name == 'volar') then
-      server_config.filetypes = {'vue', 'typescript', 'javascript'}
+      server_config.filetypes = {'vue', 'typescript', 'javascript', 'html'}
     end
     lspconfig[server_name].setup(server_config)
   end,
