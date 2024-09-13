@@ -18,7 +18,6 @@ return require('packer').startup(function(use)
   use {'nvim-tree/nvim-web-devicons'}
   use {'lewis6991/gitsigns.nvim'}
   use {'folke/neoconf.nvim'}
-  use {'alexghergh/nvim-tmux-navigation'}
 
   use {
     'nvim-treesitter/nvim-treesitter',
